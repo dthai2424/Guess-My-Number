@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* FONT */
+  --FONT-FAMILY: "Pixeloid Sans", sans-serif;
+  --FONT-WEIGHT: 700;
+  --FONT-SIZE: clamp(0.78rem, 4vw, 1.6rem);
+  /* COLOR */
+  --FONT-COLOR: whitesmoke;
+  --NUMBER-COLOR: black;
+  --BG-COLOR: #4cd137;
+  --BUTTON-BGCOLOR: whitesmoke;
+  --BUTTON-COLOR: black;
+  /*STANDARD PADDING  */
+  --PADDING-TB: 0.2em;
+  --PADDING-SIDE: 2.5%;
+  /* STANDARD MARGIN */
+  --MARGIN: 0em;
+}
+/*BASIC ELEMENT STYLE */
+button {
+  color: var(--BUTTON-COLOR);
+  background-color: var(--BUTTON-BGCOLOR);
+}
+input,
+button {
+  font: inherit;
+}
+input {
+  background: transparent;
+  color: var(--FONT-COLOR);
+  border: 4px solid whitesmoke;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  transition: background-color 0.5s;
+  min-height: 100vh;
+  max-width: 100vw;
+
+  font-family: var(--FONT-FAMILY);
+  color: var(--FONT-COLOR);
+  font-size: var(--FONT-SIZE);
+  font-weight: var(--FONT-WEIGHT);
+  background-color: var(--BG-COLOR);
+}
+header {
+  text-align: center;
+  margin: 0 0.3em;
+}
+nav {
+  padding: var(--PADDING-TB) 0;
+}
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+/* CONTAINER STYLE AND DISPLAY*/
+.header-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-ul li {
+  display: inline;
+}
+#btn-again {
+  width: min(40vw, 200px);
+  min-height: 30px;
+  height: min(calc(5vh + 1rem), 100px);
+}
+.container-maingame {
+  margin-top: 1rem;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  width: 100%;
+
+  padding: var(--PADDING-TB) var(--PADDING-TB);
+}
+.container-number {
+  font-size: min(calc(10vw + 1rem), 3.5rem);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: var(--BUTTON-BGCOLOR);
+  color: var(--BUTTON-COLOR);
+  width: min(60%, 200px);
+  height: min(30vw, 200px);
+  min-height: 5rem;
+  margin: 2vh 0;
+}
+
+.container-input {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+.input {
+  text-align: center;
+  width: 90%;
+  height: min(20vw, 150px);
+  font-size: min(8vw, 3rem);
+}
+#btn-check {
+  /* width:min(33vw,180px); */
+  width: min(55%, 150px);
+  min-height: 30px;
+
+  height: 1.5rem;
+}
+.main-ul p {
+  display: inline-block;
+}
+.main-ul li {
+  font-size: min(4vw, 2rem);
+  padding: 0.5rem;
+}
+@media screen and (min-width: 576px) {
+  #btn-check {
+    width: 25vw;
+    height: 5vh;
+  }
+  .container-input {
+    gap: 2vh;
+  }
+  .input {
+    height: 15vw;
+  }
+  #btn-again {
+    width: 20vw;
+    height: min(8vw, 4rem);
+  }
+  #btn-check {
+    width: 25vw;
+    height: 8vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  #btn-again {
+    width: 20vw;
+    height: min(9vw, 4rem);
+  }
+  .input {
+    width: 15rem;
+    height: 18vw;
+  }
+  #btn-check {
+    width: 20vw;
+    height: min(8vw, 5rem);
+  }
+  .container-number {
+    height: 15vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container-maingame {
+    margin-top: 2.5rem;
+  }
+  .container-number {
+    width: 25vw;
+  }
+  .input {
+    width: 28vw;
+    height: min(20vw, 8rem);
+  }
+  #btn-check {
+    width: 18vw;
+    height: 6vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .input {
+    width: 18vw;
+    height: 8vw;
+  }
+  .container-maingame {
+    margin-top: 4rem;
+  }
+  .container-number {
+    height: 11vw;
+    width: 15vw;
+  }
+  #btn-again {
+    height: 5vw;
+    width: 15vw;
+  }
+  #btn-check {
+    width: 13vw;
+    height: 5vw;
+  }
+}
+button:hover {
+  background-color: #dfe6e9;
+}
+button:active {
+  background-color: white;
+  color: black;
+}
+/* | Breakpoint | Description |
+| -------- | ---------- |
+| < 576px | xs |
+| >=576px | small |
+| >=768px | medium |
+| >=992px | large |
+| >=1200px | xl |
+| >=1400px | 2xl | */

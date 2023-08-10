@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guess My Number</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="description" content="Guess The Number game" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/pixeloid-sans");
+    </style>
+  </head>
+  <body id="#body">
+    <header>
+      <nav>
+        <ul class="header-ul">
+          <li><button id="btn-again">Again!</button></li>
+          <li>&lt;Between 1 and 20&gt;</li>
+        </ul>
+      </nav>
+      <h1>Guess My Number!</h1>
+    </header>
+    <main>
+      <section class="container-number"><p id="number">?</p></section>
+      <section class="container-maingame">
+        <section class="container-input">
+          <input
+            type="number"
+            name="inputNumber"
+            class="input"
+            id="inputNumber"
+            max="20"
+            min="1"
+          />
+          <button id="btn-check">Check!</button>
+        </section>
+        <section class="container-status">
+          <ul class="main-ul">
+            <li>
+              <p id="guessStatus">😎Guessing...</p>
+            </li>
+            <li>
+              💯Score:
+              <p id="score"></p>
+            </li>
+            <li>
+              🥇Highscore:
+              <p id="highscore"></p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
